@@ -1,0 +1,33 @@
+#toggleBackground {
+    display: flex;
+    align-items: center;
+    min-height: 35px;
+}
+
+#toggleSlider {
+    width: 40px;
+    height: 20px;
+    border-radius: 15px;
+    border: 1px solid rgb(85, 85, 85);
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+   	box-sizing: border-box;
+    margin-left: 10px;
+}
+
+#toggleButton {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: rgb(85, 85, 85);
+    position: absolute;
+    transition: transform 0.3s;
+    margin: 1px;
+}
+
+#toggleText {
+    font-size: 16px;
+    margin-left: 10px;
+    color:black;
+}
