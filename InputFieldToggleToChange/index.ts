@@ -8,7 +8,7 @@ export class InputFieldToggleToChange implements ComponentFramework.StandardCont
     private _toggleSlider: HTMLDivElement;
     private _toggleButton: HTMLDivElement;
     private _toggleText: HTMLDivElement;
-    private _pBackgroundColor: string;
+    // private _toggleBackgroundColor: HTMLDivElement;
 
     constructor() { }
 
@@ -22,6 +22,10 @@ export class InputFieldToggleToChange implements ComponentFramework.StandardCont
         // Create toggle background
         this._toggleBackground = document.createElement("div");
         this._toggleBackground.setAttribute("id", "toggleBackground");
+
+        // this._toggleBackgroundColor = document.createElement("div");
+        // this._toggleBackgroundColor.setAttribute("id", "toggleBackgroundColor");
+
         this._toggleBackground.style.backgroundColor = this._context.parameters.pBackgroundColor.raw || "rgb(198, 239, 206)";
 
 
