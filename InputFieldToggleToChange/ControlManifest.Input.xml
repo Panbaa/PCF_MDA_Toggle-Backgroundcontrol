@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest>
-  <control namespace="InputFieldToggleToChange" constructor="InputFieldToggleToChange" version="0.0.25" display-name-key="InputFieldToggleToChange" description-key="InputFieldToggleToChange description" control-type="standard">
+  <control namespace="InputFieldToggleToChange" constructor="InputFieldToggleToChange" version="0.0.31" display-name-key="InputFieldToggleToChange" description-key="InputFieldToggleToChange description" control-type="standard">
     <property name="pToggle" display-name-key="Toggle" description-key="Toggle um Ja oder Nein auszuwählen" of-type="TwoOptions" usage="bound" required="true" />
     <property name="pBackgroundColor" display-name-key="Background-Color" description-key="Geben Sie die gewünschte Hintergrundfarbe im folgenden Format an: rgb(xxx,xxx,xxx)" of-type="SingleLine.Text" usage="input" required="true" />
     <resources>

@@ -1,3 +1,9 @@
+#toggleContainer {
+    display: flex;
+    align-items: center;
+    min-height: 35px;
+}
+
 #toggleBackground {
     display: flex;
     align-items: center;
@@ -29,5 +35,6 @@
 #toggleText {
     font-size: 16px;
     margin-left: 10px;
+    margin-right: 10px;
     color:black;
 }

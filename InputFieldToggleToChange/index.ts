@@ -4,11 +4,11 @@ export class InputFieldToggleToChange implements ComponentFramework.StandardCont
     private _notifyOutputChanged: () => void;
     private _context: ComponentFramework.Context<IInputs>;
     private _container: HTMLDivElement;
+    private _toggleContainer: HTMLDivElement;
     private _toggleBackground: HTMLDivElement;
     private _toggleSlider: HTMLDivElement;
     private _toggleButton: HTMLDivElement;
     private _toggleText: HTMLDivElement;
-    // private _toggleBackgroundColor: HTMLDivElement;
 
     constructor() { }
 
@@ -19,15 +19,13 @@ export class InputFieldToggleToChange implements ComponentFramework.StandardCont
         this._context = context;
         this._container = container;
 
+        // Create toggle container
+        this._toggleContainer = document.createElement("div");
+        this._toggleContainer.setAttribute("id", "toggleContainer");
+
         // Create toggle background
         this._toggleBackground = document.createElement("div");
         this._toggleBackground.setAttribute("id", "toggleBackground");
-
-        // this._toggleBackgroundColor = document.createElement("div");
-        // this._toggleBackgroundColor.setAttribute("id", "toggleBackgroundColor");
-
-        this._toggleBackground.style.backgroundColor = this._context.parameters.pBackgroundColor.raw || "rgb(198, 239, 206)";
-
 
         // Create toggle slider
         this._toggleSlider = document.createElement("div");
@@ -49,9 +47,10 @@ export class InputFieldToggleToChange implements ComponentFramework.StandardCont
         this._toggleBackground.appendChild(this._toggleText);
 
         // Append background to container
-        this._container.appendChild(this._toggleBackground);
+        this._toggleContainer.appendChild(this._toggleBackground);
 
-
+        // Append toggle container to main container
+        this._container.appendChild(this._toggleContainer);
     }
 
     public updateView(context: ComponentFramework.Context<IInputs>): void {
